@@ -4,6 +4,9 @@ base:
     - cmd
     - cp
     - firewall 
+    - grains
+    - group
+    - ip
 
 
 
