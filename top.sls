@@ -18,8 +18,8 @@ base:
     - win_autoruns
     - win_dns_client
     - win_servermanager
-
-
-
-
+    - files
+    - package
+    - users
+    - win_status
 
