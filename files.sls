@@ -10,6 +10,7 @@ file_copy:
     - name: c:/test/test1
     - source: c:/test/test
     - makedirs: True
+    - preserve: True
 
 file_comment:
   file.comment:
@@ -22,13 +23,20 @@ file_replace:
     - pattern: 'test'
     - repl: 'testing'
 
+add_file:
+  file.managed:
+    - name: c:/test/test2
+    - makedirs: True
+    - contents: |
+        Only a test
+
 file_absent:
   file.absent:
-    - name: c:/test/test1
+    - name: c:/test/test2
 
 recursive_configs:
   file.recurse:
-    - name: c:/test/test1
+    - name: c:/test/test2
     - source: salt://test
     - include_empty: True
 
